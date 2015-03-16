@@ -57,7 +57,7 @@ class NewsController extends Controller {
 		$input = $request->all();
 		News::Create($input);
 
-		return redirect('/news/list');
+		return redirect('/news');
 	}
 
 	/**
