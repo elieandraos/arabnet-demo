@@ -23,13 +23,13 @@ class NewsController extends Controller {
 	 */
 	public function index()
 	{
-		$news = News::all();
+		$news = News::orderBy('created_at', 'DESC')->get();
 		$data = [];
 		foreach($news as $n)
 		{
 			array_push($data, [
 				'title' => $n->title,
-				'description' => $n->description,
+				'description' => substr($n->description, 0, 50)."...",
 				'url' => route('showNews', $n->id)
 			]);
 

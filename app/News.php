@@ -16,7 +16,7 @@ class News extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['title', 'description'];
+	protected $fillable = ['title', 'description', 'created_at'];
 
 	protected $hidden = ['id', 'updated_at'];
 

@@ -19,7 +19,7 @@ class NewsTableSeeder extends Seeder
 		{
 			News::create([
 				'title' => $faker->name,
-				'description' => $faker->sentence(12)
+				'description' => $faker->sentence(100)
 			]);
 		}		
 	}
